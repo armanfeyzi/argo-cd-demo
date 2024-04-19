@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
-  namespace: foo
+  name: ariane
+  namespace: one
   labels:
-    app: nginx
+    app: ariane
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: ariane
   template:
     metadata:
       labels:
-        app: nginx
+        app: ariane
     spec:
       containers:
-        - name: nginx
-          image: aputra/nginx:v0.1.3
+        - name: ariane
+          image: armanfeyzi/ariane:e93b877f
           ports:
             - containerPort: 80

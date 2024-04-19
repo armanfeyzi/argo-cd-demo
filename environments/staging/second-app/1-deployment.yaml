@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
-  namespace: bar
+  name: flaskapp
+  namespace: two
   labels:
-    app: nginx
+    app: flaskapp
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: flaskapp
   template:
     metadata:
       labels:
-        app: nginx
+        app: flaskapp
     spec:
       containers:
-        - name: nginx
-          image: aputra/nginx:v0.1.3
+        - name: flaskapp
+          image: armanfeyzi/flask-app:v1
           ports:
             - containerPort: 80
