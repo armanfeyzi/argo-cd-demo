@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: ariane
-          image: armanfeyzi/ariane:e93b877f
+          image: armanfeyzi/ariane:a6b8121e
           ports:
             - containerPort: 80
